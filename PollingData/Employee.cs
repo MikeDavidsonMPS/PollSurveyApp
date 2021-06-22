@@ -11,5 +11,20 @@ namespace PollingData
     {
         [Key]
         public int EmployId { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        [Required]
+        public string Department { get; set; }
+
+        [Required]
+        public string Email { get; set; }
     }
 }

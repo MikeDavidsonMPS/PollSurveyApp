@@ -63,5 +63,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PollingData\PollingData.csproj">
+      <Project>{6859636C-51AD-4BEE-B591-D0181A593187}</Project>
+      <Name>PollingData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PollingModel\PollingModel.csproj">
+      <Project>{0b2746f3-c63d-4626-8426-a360d2850ac5}</Project>
+      <Name>PollingModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
