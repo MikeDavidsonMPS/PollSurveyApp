@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PollingData",
+    "\\PollingModel",
+    "\\PollingService",
+    "\\PollSurveyApp.API.NET",
+    "\\PollSurveyApp.API.NET\\Controllers"
+  ],
+  "SelectedNode": "\\PollingService\\SurveyService.cs",
+  "PreviewInSolutionExplorer": false
+}

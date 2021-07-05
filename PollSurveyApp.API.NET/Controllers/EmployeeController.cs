@@ -75,10 +75,11 @@ namespace PollSurveyApp.API.NET.Controllers
 
         private EmployeeService CreateEmployeeService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
+            var userId = User.Identity.GetUserId();
             var noteService = new EmployeeService(userId);
 
             return noteService;
         }
+
     }
 }
