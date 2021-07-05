@@ -12,15 +12,9 @@ C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\Microsoft.Owin.S
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\Newtonsoft.Json.dll
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\Owin.dll
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingModel.dll
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingService.dll
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\System.Web.Http.dll
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\System.Web.Http.Owin.dll
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingModel.pdb
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingModel.dll.config
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingService.pdb
-C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\PollingService.dll.config
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\EntityFramework.xml
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\merid\source\repos\PollSurveyApp\PollingData\bin\Debug\Microsoft.AspNet.Identity.Core.xml

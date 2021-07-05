@@ -7,24 +7,22 @@ using System.Threading.Tasks;
 
 namespace PollingModel
 {
-    public class SurveyModel
+    public class SurveyCreate
     {
-        public int SurveyId { get; set; }
-
+        [Required]
         public string FirstName { get; set; }
-
+        [Required]
         public string LastName { get; set; }
-
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
-
+        [Required]
         public DepartmentsEnum Department { get; set; }
-
+        [Required]
         public CategoriesEnum Category { get; set; }
 
-
+        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset ModifiedUtc { get; set; }
     }
 }
-

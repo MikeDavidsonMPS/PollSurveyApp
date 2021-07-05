@@ -7,24 +7,16 @@ using System.Threading.Tasks;
 
 namespace PollingModel
 {
-    public class SurveyModel
+    public class AdminDetails
     {
-        public int SurveyId { get; set; }
-
+        public string Id { get; set; }
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
-        [EmailAddress]
         public string Email { get; set; }
-
         public DepartmentsEnum Department { get; set; }
 
-        public CategoriesEnum Category { get; set; }
-
-
-        public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public DateTimeOffset? CreatedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
-
