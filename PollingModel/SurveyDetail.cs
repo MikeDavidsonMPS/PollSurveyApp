@@ -17,8 +17,7 @@ namespace PollingModel
 
         public string LastName { get; set; }
 
-        [EmailAddress]
-        public string Email { get; set; }
+        public string SurveyTitle { get; set; }
 
         public DepartmentsEnum Department { get; set; }
  

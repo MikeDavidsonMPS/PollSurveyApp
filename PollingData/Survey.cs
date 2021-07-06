@@ -25,8 +25,7 @@ namespace PollingData
         [Required]
         public string LastName { get; set; }
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string SurveyTitle { get; set; }
         [Required]
         public DepartmentsEnum Department { get; set; }
         [Required]

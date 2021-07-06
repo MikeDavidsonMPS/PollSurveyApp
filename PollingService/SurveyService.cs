@@ -25,7 +25,7 @@ namespace PollingService
                 {
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Email = model.Email,
+                    SurveyTitle = model.SurveyTitle,
                     Department = (PollingData.DepartmentsEnum)model.Department,
                     Category = (PollingData.CategoriesEnum)model.Category,
                     CreatedUtc = DateTimeOffset.Now,
@@ -51,7 +51,7 @@ namespace PollingService
                         SurveyId = e.SurveyId,
                         FirstName = e.FirstName,
                         LastName = e.LastName,
-                        Email = e.Email,
+                        SurveyTitle = e.SurveyTitle,
                         Department = (PollingModel.DepartmentsEnum)e.Department,
                         Category = (PollingModel.CategoriesEnum)e.Category,
                         CreatedUtc = e.CreatedUtc,
@@ -76,7 +76,7 @@ namespace PollingService
                     SurveyId = entity.SurveyId,
                     FirstName = entity.FirstName,
                     LastName = entity.LastName,
-                    Email = entity.Email,
+                    SurveyTitle = entity.SurveyTitle,
                     Department = (PollingModel.DepartmentsEnum)entity.Department,
                     Category = (PollingModel.CategoriesEnum)entity.Category,
                     CreatedUtc= entity.CreatedUtc,
@@ -96,7 +96,7 @@ namespace PollingService
 
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
-                entity.Email = model.Email;
+                entity.SurveyTitle = model.SurveyTitle;
                 entity.Department = (PollingData.DepartmentsEnum)model.Department;
                 entity.Department = (PollingData.DepartmentsEnum)(PollingData.CategoriesEnum)model.Category;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
