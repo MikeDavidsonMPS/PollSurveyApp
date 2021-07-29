@@ -53,6 +53,8 @@ ex. Jared Wooten
 
 ex. Xzavier Dunn
 
+ex. Matt McKinney
+
 ## Version History
 
 * 0.2
