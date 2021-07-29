@@ -38,12 +38,19 @@ command to run if program contains helper info
 Contributors names and contact info
 
 ex. Lenore Brown
+
 ex. Mansa SamLafo
+
 ex. Shirisha Bongu
+
 ex. Eric Bella
+
 ex. Genevieve Meadows
+
 ex. Erika Johnson
+
 ex. Jared Wooten
+
 ex. Xzavier Dunn
 
 ## Version History
