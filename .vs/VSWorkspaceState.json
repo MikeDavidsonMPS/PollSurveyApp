@@ -3,10 +3,8 @@
     "",
     "\\PollingData",
     "\\PollingModel",
-    "\\PollingService",
-    "\\PollSurveyApp.API.NET",
     "\\PollSurveyApp.API.NET\\Controllers"
   ],
-  "SelectedNode": "\\PollingService\\SurveyService.cs",
+  "SelectedNode": "\\PollingModel\\SurveyModel.cs",
   "PreviewInSolutionExplorer": false
 }
