@@ -1,6 +1,10 @@
 # PollSurveyApp
 
-Simple overview of use/purpose.
+This is a API database for a company/busines's internal questionaires and surveys. 
+
+Database also stores company employee's profile for access. Profile are limited to only 
+
+company emails and password used for access to survey dababase. NO PERSONAL INFORMATION
 
 ## Description
 
@@ -10,7 +14,7 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Visual Studio Community
 * ex. Windows 10
 
 ### Installing
