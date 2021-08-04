@@ -98,7 +98,7 @@ namespace PollingService
                 entity.LastName = model.LastName;
                 entity.SurveyTitle = model.SurveyTitle;
                 entity.Department = (PollingData.DepartmentsEnum)model.Department;
-                entity.Department = (PollingData.CategoriesEnum)model.Category;
+                entity.Category = (PollingData.CategoriesEnum)model.Category;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
                 
                 return ctx.SaveChanges() == 1;

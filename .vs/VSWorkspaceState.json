@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\PollingData",
-    "\\PollingModel",
-    "\\PollSurveyApp.API.NET\\Controllers"
+    "\\PollingModel"
   ],
-  "SelectedNode": "\\PollingModel\\SurveyModel.cs",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
