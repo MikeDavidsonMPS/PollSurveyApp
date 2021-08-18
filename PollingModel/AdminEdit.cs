@@ -7,19 +7,13 @@ using System.Threading.Tasks;
 
 namespace PollingModel
 {
-    public class EmployeeDetail
+    public class AdminEdit
     {
-        public int EmployeeId { get; set; }
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
-        public DepartmentsEnum Department { get; set; }
         [EmailAddress]
         public string Email { get; set; }
-
-   
-        public DateTimeOffset? CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
+        public DepartmentsEnum Department { get; set; }
     }
+    
 }

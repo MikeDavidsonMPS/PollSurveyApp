@@ -84,6 +84,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202107060008088_InitialSurveyTables.cs" />
+    <Compile Include="Migrations\202107060008088_InitialSurveyTables.Designer.cs">
+      <DependentUpon>202107060008088_InitialSurveyTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Survey.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="IdentityModels.cs" />
@@ -92,6 +97,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202107060008088_InitialSurveyTables.resx">
+      <DependentUpon>202107060008088_InitialSurveyTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

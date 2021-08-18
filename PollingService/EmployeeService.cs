@@ -10,9 +10,9 @@ namespace PollingService
 {
     public class EmployeeService
     {
-        private readonly Guid _userId;
+        private readonly string _userId;
 
-        public EmployeeService(Guid userId)
+        public EmployeeService(string userId)
         {
             _userId = userId;
         }
@@ -24,14 +24,13 @@ namespace PollingService
                 var entity =
                     new Employee()
                     {
-                        OwnerId = _userId,
                         FirstName = model.FirstName,
                         LastName = model.LastName,
-                        Department = model.Department,
+                        Department = (PollingData.DepartmentsEnum)model.Department,
                         Email = model.Email
                     };
 
-                ctx.EmployUsers.Add(entity);
+                ctx.EmployeeUsers.Add(entity);
                 return ctx.SaveChanges() == 1;
 
             }
@@ -43,13 +42,14 @@ namespace PollingService
             {
                 var query =
                     ctx
-                    .EmployUsers
-                    .Where(e => e.OwnerId == _userId)
+                    .EmployeeUsers
+                    .Where(e => e.UserId == _userId)
                     .Select(e => new EmployeeModel
                     {
+                        EmployeeId =e.EmployeeId,
                         FirstName = e.FirstName,
                         LastName = e.LastName,
-                        Department = e.Department,
+                        Department = (PollingModel.DepartmentsEnum)e.Department,
                         Email = e.Email
                     });
 
@@ -57,21 +57,23 @@ namespace PollingService
             }
         }
 
-        public EmployeeDetail GetEmployeeById(int id)
+        public EmployeeDetail GetEmployeeById(int _userId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-                    ctx.EmployUsers.Single(e => e.EmployId == id && e.OwnerId == _userId);
-
+                    ctx.
+                    EmployeeUsers.Single(e => e.EmployeeId == _userId);
                 return new EmployeeDetail
                 {
-                    EmployId = entity.EmployId,
+                    EmployeeId = entity.EmployeeId,
                     FirstName = entity.FirstName,
                     LastName = entity.LastName,
-                    Department = entity.Department,
-                    Email = entity.Email
-                
+                    Department = (PollingModel.DepartmentsEnum)entity.Department,
+                    Email = entity.Email,
+                    CreatedUtc = entity.CreatedUtc,
+                    ModifiedUtc = entity.ModifiedUtc
+
                 };
             }
         }
@@ -82,27 +84,28 @@ namespace PollingService
             {
                 var entity =
                     ctx
-                    .EmployUsers
-                    .Single(e => e.EmployId == model.EmployId && e.OwnerId == _userId);
+                    .EmployeeUsers
+                    .Single(e => e.UserId == _userId);
 
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
-                entity.Department = model.Department;
+                entity.Department = (PollingData.DepartmentsEnum)model.Department;
                 entity.Email = model.Email;
+                entity.ModifiedUtc = model.ModifiedUtc;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteEmployee(int id)
+        public bool DeleteEmployee(int _userId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-                    ctx.EmployUsers.Single(e => e.EmployId == id && e.OwnerId == _userId);
+                    ctx.EmployeeUsers
+                    .Single(e => e.EmployeeId == _userId);
 
-                ctx.EmployUsers.Remove(entity);
-
+                ctx.EmployeeUsers.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }

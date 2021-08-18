@@ -54,8 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCreate.cs" />
+    <Compile Include="AdminDetails.cs" />
+    <Compile Include="AdminEdit.cs" />
     <Compile Include="AdminModel.cs" />
     <Compile Include="EmployeeCreate.cs" />
+    <Compile Include="SurveyCreate.cs" />
     <Compile Include="SurveyDetail.cs" />
     <Compile Include="SurveyEdit.cs" />
     <Compile Include="EmployeeEdit.cs" />
@@ -67,6 +71,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PollingData\PollingData.csproj">
+      <Project>{6859636c-51ad-4bee-b591-d0181a593187}</Project>
+      <Name>PollingData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

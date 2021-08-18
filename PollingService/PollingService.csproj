@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -65,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PollingData\PollingData.csproj">
-      <Project>{6859636C-51AD-4BEE-B591-D0181A593187}</Project>
+      <Project>{6859636c-51ad-4bee-b591-d0181a593187}</Project>
       <Name>PollingData</Name>
     </ProjectReference>
     <ProjectReference Include="..\PollingModel\PollingModel.csproj">

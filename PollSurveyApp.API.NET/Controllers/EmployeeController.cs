@@ -6,40 +6,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Mvc;
+using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
+using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 
 
 namespace PollSurveyApp.API.NET.Controllers
 {
-    [Authorize]
+   
     public class EmployeeController : ApiController
     {
-    
-        public IHttpActionResult Get()
-        {
-            EmployeeService employeeService = CreateEmployeeService();
 
-            var employee = employeeService.GetEmployees();
-
-            return Ok(employee);
-        }
+        [HttpPost]
         public IHttpActionResult Post(EmployeeCreate employee)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
-
             var service = CreateEmployeeService();
-
             if (!service.CreateEmployee(employee))
-            {
                 return InternalServerError();
-            }
-
             return Ok("You have created new Employee ");
         }
-
-        public IHttpActionResult Get(int id)
+        [HttpGet]
+        public IHttpActionResult GetAll()
+        {
+            EmployeeService employeeService = CreateEmployeeService();
+            var employee = employeeService.GetEmployees();
+            return Ok(employee);
+        }
+        [HttpGet]
+        public IHttpActionResult GetId(int id)
         {
             EmployeeService empolyeeService = CreateEmployeeService();
 
@@ -47,8 +44,8 @@ namespace PollSurveyApp.API.NET.Controllers
 
             return Ok(employee);
         }
-
-        public IHttpActionResult Put(EmployeeEdit employee)
+        [HttpPut]
+        public IHttpActionResult Update(EmployeeEdit employee)
         {
             if (!ModelState.IsValid)
             {
@@ -64,23 +61,26 @@ namespace PollSurveyApp.API.NET.Controllers
 
             return Ok("Employee has been updated!");
         }
-
-        public IHttpActionResult Delete(int id)
+        [HttpPut]
+        public IHttpActionResult Delete(int employeeId)
         {
             var service = CreateEmployeeService();
 
-            if (!service.DeleteEmployee(id))
+            if (!service.DeleteEmployee(employeeId))
             {
                 return InternalServerError();
             }
             return Ok("Employee has been deleted!");
         }
+
+
         private EmployeeService CreateEmployeeService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
+            var userId = User.Identity.GetUserId();
             var noteService = new EmployeeService(userId);
 
             return noteService;
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
@@ -9,6 +11,20 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace PollingData
 {
+    public enum DepartmentsEnum
+    {
+        HumanResource = 1,
+        Accounting,
+        AccountsReceivable,
+        ShippingReceiving
+    }
+    public enum CategoriesEnum
+    {
+        Admin = 1,
+        Personal,
+        Client
+    }
+
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
@@ -19,7 +35,35 @@ namespace PollingData
             // Add custom user claims here
             return userIdentity;
         }
+        //AdminData Model
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        private string email;
+
+        public string GetEmail()
+        {
+            return email;
+        }
+
+        public void SetEmail(string value)
+        {
+            email = value;
+        }
+
+        [Required]
+        public DepartmentsEnum Department { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public DateTimeOffset ModifiedUtc { get; set; }
     }
+
+
+
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -27,14 +71,16 @@ namespace PollingData
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
 
-        public DbSet<Employee> EmployUsers { get; set; } 
+        public DbSet<Employee> EmployeeUsers { get; set; }
         public DbSet<Survey> PollResults { get; set; }
+        //public DbSet<Admin> Admins { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

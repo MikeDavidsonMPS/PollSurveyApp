@@ -10,7 +10,7 @@ namespace PollingModel
     public class EmployeeModel
     {
         [Key]
-        public int EmployId { get; set; }
+        public int EmployeeId { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -19,9 +19,10 @@ namespace PollingModel
         public string LastName { get; set; }
 
         [Required]
-        public string Department { get; set; }
+        public DepartmentsEnum Department { get; set; }
 
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
     }
 }
