@@ -41,6 +41,7 @@ namespace PollingData
         public string LastName { get; set; }
 
         private string email;
+        public bool Admin { get; set; } 
 
         public string GetEmail()
         {
@@ -77,7 +78,6 @@ namespace PollingData
             return new ApplicationDbContext();
         }
 
-        public DbSet<Employee> EmployeeUsers { get; set; }
         public DbSet<Survey> PollResults { get; set; }
         //public DbSet<Admin> Admins { get; set; }
 
