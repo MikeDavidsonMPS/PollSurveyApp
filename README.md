@@ -27,8 +27,6 @@ An in-depth paragraph about your project and overview of use.
 * How to run the program
 * Step-by-step bullets
 ```
-code blocks for commands
-```
 ### Endpoints
 
 * Account
@@ -63,6 +61,7 @@ code blocks for commands
    * GET api/Admin/{id} -  Will produce user account by POST generated ID
    * PUT api/Admin - Allow to edit user account by POST ID
    * Delete api/Admin/{id} - CURRENTLY NOT AVAILABLE
+```
    
 ## Help
 
