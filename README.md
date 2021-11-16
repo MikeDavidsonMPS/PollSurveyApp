@@ -29,7 +29,7 @@ An in-depth paragraph about your project and overview of use.
 ```
 code blocks for commands
 ```
-###Endpoints
+### Endpoints
 
 * Account
    * GET api/Account/userInfo - Allows a registered user to login using a remote provider (google, iOs). The GET will require login to Provider before access.
