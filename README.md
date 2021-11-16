@@ -77,13 +77,17 @@ Contributors names and contact info
 
 ex. Lenore Brown
 
-ex. Mansa SamLafo
-
-ex. Shirisha Bongu
+ex. Mike Davidson
 
 ex. Eric Bella
 
 ex. Genevieve Meadows
+
+ex. Lesley Reuter
+
+ex. Phoenix Brenton
+
+ex. Shirisha Bongu
 
 ex. Erika Johnson
 
@@ -92,6 +96,8 @@ ex. Jared Wooten
 ex. Xzavier Dunn
 
 ex. Matt McKinney
+
+ex. Mansa SamLafo
 
 ## Version History
 
